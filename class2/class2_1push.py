@@ -9,7 +9,7 @@ class node:
         self.value = value
         self.next = None
         
-class linkinglist:
+class stack:
     def __init__(self):
         self.head = node(0)
     def trace(self):
@@ -22,6 +22,17 @@ class linkinglist:
         while run.next != None:
             run = run.next
         run.next = node(value)
+    def pop(self):
+        pre = self.head
+        run = self.head.next
+        
+        while run.next:
+            pre = pre.next
+            run = run.next
+        pre.next = None
+        
+        return run.value
+    '''
     def delete(self,value):
         pre = self.head
         run = self.head.next
@@ -32,3 +43,4 @@ class linkinglist:
             else:
                 pre = pre.next
                 run = run.next
+    '''
