@@ -10,6 +10,4 @@ class node:
         self.value = value
         self.child = []
         
-
-    
      
